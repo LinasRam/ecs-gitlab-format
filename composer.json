@@ -1,0 +1,33 @@
+{
+    "name": "linasram/ecs-gitlab-format",
+    "description": "GitLab output formatter for easy-coding-standard.",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Linas Ramanauskas",
+            "email": "linas.ramanauskas95@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "symplify/easy-coding-standard": "^10.1 || ^11.0 || ^12.0"
+    },
+    "require-dev": {
+        "dg/bypass-finals": "^1.6",
+        "phpunit/phpunit": "^11.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LinasRam\\EcsGitlabFormat\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LinasRam\\EcsGitlabFormat\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

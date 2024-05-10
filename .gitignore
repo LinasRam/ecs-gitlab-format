@@ -1,2 +1,7 @@
 .idea
 scripts
+
+/vendor/
+composer.lock
+
+.phpunit.cache
