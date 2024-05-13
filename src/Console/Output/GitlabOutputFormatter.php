@@ -76,7 +76,7 @@ class GitlabOutputFormatter implements OutputFormatterInterface
         string $description,
         string $filePath,
         int $line,
-        string $severity,
+        string $severity
     ): array {
         return [
             'type' => 'issue',

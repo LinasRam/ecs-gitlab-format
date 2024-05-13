@@ -14,12 +14,12 @@
         }
     ],
     "require": {
-        "php": "^8.2",
+        "php": ">=7.4",
         "symplify/easy-coding-standard": "^10.1 || ^11.0 || ^12.0"
     },
     "require-dev": {
         "dg/bypass-finals": "^1.6",
-        "phpunit/phpunit": "^11.1"
+        "phpunit/phpunit": "^9.6"
     },
     "autoload": {
         "psr-4": {
@@ -30,6 +30,9 @@
         "psr-4": {
             "LinasRam\\EcsGitlabFormat\\Tests\\": "tests/"
         }
+    },
+    "scripts": {
+        "phpunit": "phpunit"
     },
     "config": {
         "sort-packages": true
