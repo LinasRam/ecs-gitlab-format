@@ -34,7 +34,7 @@
         }
     },
     "scripts": {
-        "cs-check": "ecs ",
+        "cs-check": "ecs",
         "cs-fix": "ecs --fix",
         "analyze": "phpstan",
         "phpunit": "phpunit"
