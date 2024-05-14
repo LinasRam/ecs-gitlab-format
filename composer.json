@@ -15,7 +15,8 @@
     ],
     "require": {
         "php": ">=7.4",
-        "symplify/easy-coding-standard": ">=10.1"
+        "ext-json": "*",
+        "symplify/easy-coding-standard": "^9.4"
     },
     "require-dev": {
         "dg/bypass-finals": "^1.6",
@@ -32,6 +33,8 @@
         }
     },
     "scripts": {
+        "cs-check": "ecs ",
+        "cs-fix": "ecs --fix",
         "phpunit": "phpunit"
     },
     "config": {

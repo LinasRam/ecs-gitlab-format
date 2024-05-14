@@ -4,36 +4,31 @@ declare(strict_types=1);
 
 namespace LinasRam\EcsGitlabFormat\Console\Output;
 
-use Symplify\EasyCodingStandard\Console\Output\ExitCodeResolver;
 use Symplify\EasyCodingStandard\Console\Style\EasyCodingStandardStyle;
 use Symplify\EasyCodingStandard\Contract\Console\Output\OutputFormatterInterface;
-use Symplify\EasyCodingStandard\ValueObject\Configuration;
 use Symplify\EasyCodingStandard\ValueObject\Error\ErrorAndDiffResult;
 
 class GitlabOutputFormatter implements OutputFormatterInterface
 {
     public const NAME = 'gitlab';
-
     private const SEVERITY_MAJOR = 'major';
-
     private const SEVERITY_MINOR = 'minor';
+    private const SUCCESS = 0;
+    private const FAILURE = 1;
 
     private EasyCodingStandardStyle $easyCodingStandardStyle;
 
-    private ExitCodeResolver $exitCodeResolver;
-
-    public function __construct(EasyCodingStandardStyle $easyCodingStandardStyle, ExitCodeResolver $exitCodeResolver)
+    public function __construct(EasyCodingStandardStyle $easyCodingStandardStyle)
     {
         $this->easyCodingStandardStyle = $easyCodingStandardStyle;
-        $this->exitCodeResolver = $exitCodeResolver;
     }
 
-    public function report(ErrorAndDiffResult $errorAndDiffResult, Configuration $configuration): int
+    public function report($errorAndDiffResult, $configuration): int
     {
         $report = $this->generateReport($errorAndDiffResult);
         $this->easyCodingStandardStyle->writeln(json_encode($report, \JSON_PRETTY_PRINT));
 
-        return $this->exitCodeResolver->resolve($errorAndDiffResult, $configuration);
+        return empty($report) ? self::SUCCESS : self::FAILURE;
     }
 
     /**
