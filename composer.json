@@ -14,12 +14,13 @@
         }
     ],
     "require": {
-        "php": "^8.2",
-        "symplify/easy-coding-standard": "^10.1 || ^11.0 || ^12.0"
+        "php": ">=7.4",
+        "ext-json": "*",
+        "symplify/easy-coding-standard": ">=10.1"
     },
     "require-dev": {
         "dg/bypass-finals": "^1.6",
-        "phpunit/phpunit": "^11.1"
+        "phpunit/phpunit": "^9.6"
     },
     "autoload": {
         "psr-4": {
@@ -30,6 +31,11 @@
         "psr-4": {
             "LinasRam\\EcsGitlabFormat\\Tests\\": "tests/"
         }
+    },
+    "scripts": {
+        "cs-check": "ecs ",
+        "cs-fix": "ecs --fix",
+        "phpunit": "phpunit"
     },
     "config": {
         "sort-packages": true

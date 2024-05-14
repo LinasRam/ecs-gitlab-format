@@ -5,20 +5,19 @@ declare(strict_types=1);
 namespace LinasRam\EcsGitlabFormat\Tests\Console\Output;
 
 use LinasRam\EcsGitlabFormat\Console\Output\GitlabOutputFormatter;
-use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Symplify\EasyCodingStandard\Console\Output\ExitCodeResolver;
 use Symplify\EasyCodingStandard\Console\Style\EasyCodingStandardStyle;
 use Symplify\EasyCodingStandard\ValueObject\Configuration;
 use Symplify\EasyCodingStandard\ValueObject\Error\ErrorAndDiffResult;
 
-#[CoversClass(GitlabOutputFormatter::class)]
+/**
+ * @covers \LinasRam\EcsGitlabFormat\Console\Output\GitlabOutputFormatter
+ */
 final class GitlabOutputFormatterTest extends TestCase
 {
     private GitlabOutputFormatter $gitlabOutputFormatter;
-
     private EasyCodingStandardStyle $easyCodingStandardStyle;
-
     private ExitCodeResolver $exitCodeResolver;
 
     protected function setUp(): void

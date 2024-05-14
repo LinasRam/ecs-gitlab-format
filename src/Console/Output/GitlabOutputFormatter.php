@@ -13,13 +13,10 @@ use Symplify\EasyCodingStandard\ValueObject\Error\ErrorAndDiffResult;
 class GitlabOutputFormatter implements OutputFormatterInterface
 {
     public const NAME = 'gitlab';
-
     private const SEVERITY_MAJOR = 'major';
-
     private const SEVERITY_MINOR = 'minor';
 
     private EasyCodingStandardStyle $easyCodingStandardStyle;
-
     private ExitCodeResolver $exitCodeResolver;
 
     public function __construct(EasyCodingStandardStyle $easyCodingStandardStyle, ExitCodeResolver $exitCodeResolver)
@@ -76,7 +73,7 @@ class GitlabOutputFormatter implements OutputFormatterInterface
         string $description,
         string $filePath,
         int $line,
-        string $severity,
+        string $severity
     ): array {
         return [
             'type' => 'issue',
