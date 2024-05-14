@@ -20,6 +20,7 @@
     },
     "require-dev": {
         "dg/bypass-finals": "^1.6",
+        "phpstan/phpstan": "^1.11",
         "phpunit/phpunit": "^9.6"
     },
     "autoload": {
@@ -35,6 +36,7 @@
     "scripts": {
         "cs-check": "ecs ",
         "cs-fix": "ecs --fix",
+        "analyze": "phpstan",
         "phpunit": "phpunit"
     },
     "config": {
