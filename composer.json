@@ -5,7 +5,9 @@
     "type": "library",
     "keywords": [
         "static analysis",
-        "code style"
+        "code style",
+        "gitlab",
+        "artifacts"
     ],
     "authors": [
         {
