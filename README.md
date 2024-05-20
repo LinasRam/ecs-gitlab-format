@@ -29,7 +29,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 };
 ```
 
-For `easy-coding-standard ^11.0`:
+For `easy-coding-standard >=11.0`:
 
 ```php
 <?php
