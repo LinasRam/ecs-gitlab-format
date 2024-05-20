@@ -1,4 +1,4 @@
-# GitLab output formatter for easy-coding-standard.
+# GitLab output formatter for easy-coding-standard
 
 A [GitLab](https://gitlab.com) output formatter
 for [easy-coding-standard](https://github.com/easy-coding-standard/easy-coding-standard).
